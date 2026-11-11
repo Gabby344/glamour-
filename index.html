@@ -2,7 +2,15 @@
 <title>Glamour Production — Accessoires & mode made in RDC</title>
 <meta name="description" content="Glamour Production : accessoires, bijoux et mode, livrés à Kolwezi, Kinshasa, Fungurume, Likasi et Lubumbashi.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css"></head><body>
+<link rel="stylesheet" href="style.css">
+<style>
+.addr{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;margin:2rem auto;text-align:left;max-width:820px}
+.addr article{background:var(--k);color:#fff;border-radius:22px;padding:1.6rem;border:1px solid var(--g);transition:.3s}
+.addr article:hover{transform:translateY(-5px);box-shadow:0 20px 40px -22px var(--g)}
+.addr h3{font:600 1.7rem "Cormorant Garamond",serif;color:var(--g);margin:0 0 .6rem}
+.addr p{margin:.15rem 0;color:#e8e1d4}.addr small{display:block;margin-top:.5rem;color:var(--mut)}
+.addr .btn{margin-top:1rem;padding:.6rem 1.3rem;font-size:.9rem}
+</style></head><body>
 <header class="nav"><a class="brand" href="#top"><img src="images/logo.jpg" alt="Glamour Production"><span>Glamour</span></a>
 <nav><a href="#histoire">Notre histoire</a><a href="#boutique">Boutique</a><a href="#contact">Contact</a></nav>
 <select id="cur" aria-label="Devise"><option>USD</option><option>CDF</option><option>ZMW</option></select></header>
@@ -14,7 +22,15 @@
 <div class="stats rv"><div><b>2020</b>année de création</div><div><b>5</b>villes de livraison</div><div><b>15</b>collections</div></div></div></section>
 <section class="sec dark" id="boutique"><div class="wrap"><h2>La <em>boutique</em></h2>
 <div class="tools"><input id="q" type="search" placeholder="Rechercher un article…"><div id="chips"></div></div><div id="grid" class="grid"></div></div></section>
-<section class="sec" id="contact"><div class="wrap center rv"><h2>Parlons <em>glamour</em></h2><p>CEO Abigaelle Kabelu Mumba · <a href="mailto:Kabeluabigaelle@gmail.com">Kabeluabigaelle@gmail.com</a> · TikTok : Glamour Production</p><p>Livraison : Kinshasa · Kolwezi · Fungurume · Likasi · Lubumbashi</p></div></section>
+<section class="sec" id="contact"><div class="wrap center rv"><h2>Parlons <em>glamour</em></h2>
+<p>CEO Abigaelle Kabelu Mumba · <a href="mailto:Kabeluabigaelle@gmail.com">Kabeluabigaelle@gmail.com</a> · TikTok : Glamour Production</p>
+<div class="addr">
+<article><h3>Kolwezi</h3><p>Avenue Bukama, n° 201</p><small>Référence : école Salvator</small>
+<a class="btn" href="https://www.google.com/maps/search/?api=1&query=Avenue+Bukama+201+Kolwezi" target="_blank" rel="noopener">Itinéraire</a></article>
+<article><h3>Lubumbashi</h3><p>Commune de Kamalondo</p><p>Avenue des Écoles, quartier Kitumaini</p><small>Référence : stade Mazembe</small>
+<a class="btn" href="https://www.google.com/maps/search/?api=1&query=Avenue+des+Ecoles+Kitumaini+Kamalondo+Lubumbashi" target="_blank" rel="noopener">Itinéraire</a></article>
+</div>
+<p>Livraison : Kinshasa · Kolwezi · Fungurume · Likasi · Lubumbashi</p></div></section>
 <footer>© Glamour Production · <a href="admin.html">Espace gérante</a></footer>
 <dialog id="m"><button id="x" aria-label="Fermer">×</button><div id="mc"></div></dialog>
 <script type="module" src="app.js"></script></body></html>
