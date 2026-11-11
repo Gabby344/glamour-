@@ -1,0 +1,29 @@
+:root{--k:#0b0b0c;--k2:#17171a;--g:#c8a15a;--w:#f6f1e9;--r:#d0202b;--mut:#a79f92;font-family:Jost,system-ui,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--w);color:var(--k);line-height:1.6}
+h1,h2{font-family:"Cormorant Garamond",serif;line-height:1.05;margin:0 0 1rem}em{color:var(--g);font-style:italic}a{color:inherit}
+.nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;gap:1rem;padding:.7rem 4vw;background:rgba(11,11,12,.8);backdrop-filter:blur(10px);color:#fff}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font:600 1.5rem "Cormorant Garamond",serif}.brand img{width:40px;height:40px;border-radius:50%}
+.nav nav{margin-left:auto;display:flex;gap:1.2rem}.nav nav a{text-decoration:none;font-size:.95rem;opacity:.85}.nav nav a:hover{color:var(--g)}
+select,input{font:inherit;padding:.55rem .8rem;border-radius:99px;border:1px solid var(--g);background:var(--k);color:#fff}
+.hero{position:relative;height:100svh;min-height:540px;background:var(--k);color:#fff;overflow:hidden}
+#slides div{position:absolute;inset:0;background:center/cover;opacity:0;transform:scale(1.08);transition:opacity 1.2s,transform 7s}#slides .on{opacity:.55;transform:scale(1)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--k) 5%,transparent 80%)}
+.hero-t{position:absolute;z-index:2;left:6vw;bottom:16vh;max-width:640px}.hero-t p{letter-spacing:.3em;text-transform:uppercase;color:var(--g);font-size:.8rem}
+.hero h1{font-size:clamp(3rem,10vw,6.5rem)}
+.btn{display:inline-block;background:var(--g);color:var(--k);padding:.9rem 1.8rem;border-radius:99px;font-weight:600;text-decoration:none;border:0;cursor:pointer;transition:.25s}.btn:hover{background:var(--r);color:#fff;transform:translateY(-2px)}
+#dots{position:absolute;z-index:3;bottom:5vh;left:6vw;display:flex;gap:.5rem}#dots i{width:34px;height:3px;background:#fff5;cursor:pointer}#dots i.on{background:var(--g)}
+.sec{padding:clamp(3rem,9vw,6rem) 0}.sec.dark{background:var(--k);color:#fff}.wrap{width:min(1150px,90vw);margin:auto}.two{display:grid;grid-template-columns:1.3fr 1fr;gap:3rem;align-items:center}.center{text-align:center}
+h2{font-size:clamp(2.2rem,6vw,3.6rem)}.stats{display:grid;gap:1rem}.stats div{border:1px solid var(--g);border-radius:18px;padding:1.2rem;color:var(--mut)}.stats b{display:block;font:600 2.6rem "Cormorant Garamond",serif;color:var(--k)}
+.tools{display:grid;gap:1rem;margin-bottom:2rem}#q{width:100%;max-width:420px}#chips{display:flex;gap:.5rem;overflow-x:auto;padding-bottom:.4rem}
+.chip{flex:none;border:1px solid #fff3;background:none;color:#fff;border-radius:99px;padding:.45rem 1rem;cursor:pointer;font:inherit;transition:.2s}.chip.on,.chip:hover{background:var(--g);color:var(--k);border-color:var(--g)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:1.2rem}
+.card{background:var(--k2);border-radius:20px;overflow:hidden;cursor:pointer;transition:.3s;position:relative}.card:hover{transform:translateY(-6px);box-shadow:0 20px 40px -20px var(--g)}
+.card img{width:100%;aspect-ratio:1;object-fit:cover;transition:.5s}.card:hover img{transform:scale(1.06)}.card div{padding:1rem}.card small{color:var(--mut)}.card b{display:block;color:var(--g);font-size:1.15rem;margin-top:.2rem}
+.tag{position:absolute;top:.8rem;left:.8rem;background:var(--r);color:#fff;border-radius:99px;padding:.1rem .7rem;font-size:.75rem}
+dialog{border:0;border-radius:24px;padding:0;width:min(860px,94vw);background:var(--w)}dialog::backdrop{background:#000a}
+#x{position:absolute;right:1rem;top:.6rem;font-size:2rem;background:none;border:0;cursor:pointer;z-index:2}
+.md{display:grid;grid-template-columns:1fr 1fr}.md img{width:100%;height:100%;object-fit:cover;min-height:280px}.md div{padding:2rem}.md select{background:#fff;color:var(--k);width:100%;margin:.5rem 0 1rem}
+.pr{font:600 2rem "Cormorant Garamond",serif}.rv{opacity:0;transform:translateY(30px);transition:.8s}.rv.in{opacity:1;transform:none}
+footer{background:var(--k);color:var(--mut);text-align:center;padding:1.5rem;font-size:.9rem}
+@media(max-width:760px){.nav nav{display:none}.nav select{margin-left:auto}.two,.md{grid-template-columns:1fr}.hero-t{bottom:20vh}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
