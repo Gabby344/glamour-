@@ -1,0 +1,11 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function admin() { return request.auth != null && request.auth.token.email == 'kabeluabigaelle@gmail.com'; }
+    // Lecture publique, écriture réservée à la gérante
+    match /{col}/{id} {
+      allow read: if col in ['products', 'settings', 'testimonials', 'looks'];
+      allow write: if col in ['products', 'settings', 'testimonials', 'looks'] && admin();
+    }
+  }
+}
